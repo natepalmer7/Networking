@@ -1,14 +1,8 @@
-*
-    client.c 
-    by Nathan Palmer
-    for CSPB 3753 PA5
-    Code adapted from Beej's Guide to Network Programming
-        https://beej.us/guide/bgnet/
-
-    Client program to send messages through network sockets using TCP or UDP
-*/
 
 #include "client-server.h"
+
+#include <stdint.h>  // For INT32_MAX
+#include <stdlib.h>  // For atoi
 
 int main (int argc, char *argv[]){
     struct addrinfo hints, *servinfo;

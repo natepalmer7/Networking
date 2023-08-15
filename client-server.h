@@ -1,14 +1,4 @@
-/*
-    client-server.h 
-    Author: Nathan Palmer
-    Course: CSPB 3753 PA5
-    Inspired by: Beej's Guide to Network Programming
-    Source: https://beej.us/guide/bgnet/
 
-    Overview:
-    This header file establishes the foundation for both client and server applications by 
-    defining necessary structures and functions.
-*/
 
 #ifndef CLIENT_SERVER_H
 #define CLIENT_SERVER_H
@@ -29,7 +19,7 @@
 #include <sys/wait.h>
 #include <signal.h>
 #include <arpa/inet.h>
-
+#include <stddef.h>
 // Protocol Identifiers
 #define TCP 0
 #define UDP 1

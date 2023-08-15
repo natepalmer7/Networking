@@ -1,13 +1,5 @@
-/*
-    helpers.c 
-    by Nathan Palmer
-    for CSPB 3753 PA5
-    Code adapted from Beej's Guide to Network Programming
-        https://beej.us/guide/bgnet/
 
-    Helper functions for client and server programs
-*/
-
+#include <stddef.h>
 #include "client-server.h"
 
 // Pack the version and data of the data_msg_t structure into a single 32-bit integer.

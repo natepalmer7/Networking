@@ -1,16 +1,14 @@
 CC = gcc
-CFLAGS = -Wall
+DEPS = client-server.h
+OBJ = helpers.o
 
-# Find all .c files in the current directory
-SOURCES := $(wildcard *.c)
+all: client server
 
-# Generate a list of corresponding executable names
-PROGRAMS := $(patsubst %.c,%,$(SOURCES))
+client: $(OBJ) $(DEPS) client.c
+	$(CC) -o client client.c $(OBJ)  # <-- Ensure this line starts with a tab, not spaces
 
-all: $(PROGRAMS)
-
-%: %.c
-	$(CC) $(CFLAGS) -o $@ $<
+server: $(OBJ) $(DEPS) server.c
+	$(CC) -o server server.c $(OBJ)  # <-- Ensure this line starts with a tab, not spaces
 
 clean:
-	rm -f $(PROGRAMS)
+	rm -f client server $(OBJ)  # <-- Ensure this line starts with a tab

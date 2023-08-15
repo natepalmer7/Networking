@@ -1,13 +1,6 @@
-/*
-    server.c 
-    by Nathan Palmer
-    for CSPB 3753 PA5
-    Code adapted from Beej's Guide to Network Programming
-        https://beej.us/guide/bgnet/
 
-    Server program to listen and receive messages through TCP or UDP
-*/
 
+#include <stddef.h>
 #include "client-server.h"
 
 int main(int argc, char *argv[]){
