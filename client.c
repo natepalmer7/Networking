@@ -168,7 +168,7 @@ int tcp_send(uint32_t data, char* ip, char* port, struct addrinfo * hints, struc
         return 1;
     }
 
-    // Send data
+    // Send data over
     if ((numbytes = send(sockfd, &data, sizeof(data), 0)) == -1){
         fprintf(stderr, "Error: send\n");
 
